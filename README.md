@@ -1,20 +1,28 @@
-# 📧 Phishing Email Detection using Logistic Regression and Naive Bayes
+# Phishing Email Detector
 
-This project is a machine learning-based approach to classify emails as **Phishing** or **Safe** using text data. It uses NLP techniques and classification models to identify malicious emails based on their content.
+A web application that classifies emails as **Phishing** or **Safe** using machine learning.  
+Built with a Logistic Regression model and TF-IDF vectorizer for text processing, served via a Flask backend with a user-friendly HTML/CSS frontend.
 
 ---
 
-## Project Overview
+## Features
 
-- **Goal**: Detect phishing emails using machine learning
-- **Input**: Raw email text (`Email Text`)
-- **Output**: Label (`Phishing Email` or `Safe Email`)
-- **Models Used**:
-  - Logistic Regression
-  - Multinomial Naive Bayes
-- **Evaluation Metrics**:
-  - Accuracy
-  - Precision
-  - Recall
-  - F1 Score
-  - Confusion Matrix
+- Loads a trained Logistic Regression model and TF-IDF vectorizer.
+- Users can paste email content on a web page and get instant phishing predictions.
+- Simple, clean web UI built with Flask templating and CSS.
+
+
+---
+
+## Requirements
+
+- Python 3.x  
+- Flask  
+- scikit-learn  
+- pandas  
+- numpy  
+
+Install dependencies via:
+
+```bash
+pip install -r requirements.txt
