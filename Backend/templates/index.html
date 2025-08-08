@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Phishing Email Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Phishing Email Detector</h1>
+        <form method="POST">
+            <textarea name="email_text" placeholder="Paste your email text here...">{{ email_text if email_text else '' }}</textarea>
+            <button type="submit">Check Email</button>
+        </form>
+
+        {% if result %}
+        <div class="result {{ 'phishing' if 'Phishing' in result else 'safe' }}">
+            {{ result }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
